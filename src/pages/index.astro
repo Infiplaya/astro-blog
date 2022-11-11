@@ -1,8 +1,13 @@
 ---
+import FeatPosts from "../components/FeatPosts.astro";
+import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 const pageTitle = "Home";
 ---
 
 <Layout title={pageTitle}>
-  <main>Hello, world</main>
+  <main>
+    <Header />
+    <FeatPosts />
+  </main>
 </Layout>
