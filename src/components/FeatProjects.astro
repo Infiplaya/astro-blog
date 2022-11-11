@@ -1,0 +1,21 @@
+---
+import { projects } from "../pages/projects.astro";
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<section class="mt-10">
+  <h2 class="text-4xl font-semibold">Featured projects</h2>
+  <ul class="grid grid-cols-3 gap-5 mt-5">
+    {
+      projects.slice(0, 3).map((project) => (
+        <li>
+          <ProjectCard
+            description={project.description}
+            name={project.name}
+            link={project.link}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</section>

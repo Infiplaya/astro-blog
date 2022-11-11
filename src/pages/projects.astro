@@ -1,8 +1,48 @@
 ---
+import ProjectCard from "../components/ProjectCard.astro";
 import Layout from "../layouts/Layout.astro";
 const pageTitle = "Projects";
+export const projects = [
+  {
+    name: "Cryptosito",
+    description:
+      "Website about cryptocurrencies built with API from coingecko.",
+    link: "https://github.com/Infiplaya/cryptosito",
+  },
+  {
+    name: "Grab A Food",
+    description:
+      "Culinary website that will help you find right recipe for you",
+    link: "https://github.com/Infiplaya/grabafood",
+  },
+  {
+    name: "E-commerce website",
+    description: "Built with graphql and nextjs simple e-commerce website.",
+    link: "https://github.com/Infiplaya/recrutation-task-graphql",
+  },
+  {
+    name: "Lost Knight",
+    description: "Demo of the platformer game created with LUA framework LÖVE",
+    link: "https://github.com/Infiplaya/lostknight",
+  },
+];
 ---
 
 <Layout title={pageTitle}>
-  <main>Hello, projects</main>
+  <main class="mt-20">
+    <h1 class="text-5xl font-bold">Stuff</h1>
+    <ul class="grid grid-cols-2 gap-10 mt-10">
+      {
+        projects.map((project) => (
+          <li>
+            <ProjectCard
+              name={project.name}
+              description={project.description}
+              link={project.link}
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </main>
 </Layout>
