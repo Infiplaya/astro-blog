@@ -7,7 +7,7 @@ const posts = await Astro.glob("../pages/posts/*.mdx");
   <ul class="grid grid-cols-3 mt-5">
     {
       posts.slice(0, 3).map((post) => (
-        <li class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 w-48 h-72">
+        <li class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 w-56 h-64">
           <a href={post.url}>
             <div
               class={
