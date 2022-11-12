@@ -8,8 +8,8 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, "");
   href={href}
   rel="prefetch"
   class={`${
-    isActive ? "text-neutral-100 font-bold" : ""
-  }`}
+    isActive ? "text-neutral-100 font-semibold" : "text-neutral-400"
+  } hover:bg-neutral-800 px-2 py-1 rounded-lg`}
   {...props}
 >
   <slot />

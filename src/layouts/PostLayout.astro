@@ -1,0 +1,14 @@
+---
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <h1 class="text-3xl md:text-5xl text-neutral-100 font-bold mt-10">{frontmatter.title}</h1>
+  <p class="mt-3 text-neutral-400">{frontmatter.date}</p>
+  <p class="text-neutral-400">{frontmatter.time}</p>
+  <article class="mt-5 prose prose-headings:text-neutral-100 prose-a:text-blue-500 md:prose-lg text-neutral-200">
+    <slot />
+  </article>
+</Layout>
