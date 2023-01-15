@@ -1,13 +1,15 @@
 ---
 import Navlink from "./Navlink.astro";
+import NowPlaying from "./NowPlaying";
 ---
 
 
-<nav class="mt-5 md:mt-10 text-lg space-x-3">
+<nav class="mt-5 md:mt-10 text-lg space-x-3 flex flex-row align-middle items-center">
   <Navlink href="/">Home</Navlink>
   <Navlink href="/projects">Projects</Navlink>
   <Navlink href="/blog">Blog</Navlink>
   <Navlink href="/about">About</Navlink>
+  <NowPlaying />
 </nav>
 
 <style>

@@ -1,19 +1,28 @@
 ---
+import { Tracks } from "../components/TopTracks";
 import Layout from "../layouts/Layout.astro";
 const pageTitle = "About page";
 ---
 
 <Layout title={pageTitle}>
   <main class="mt-10 md:mt-20 text-neutral-300">
-    <h1 class="text-3xl md:text-4xl font-bold text-neutral-100">Hello there 👋</h1>
+    <h1 class="text-3xl md:text-4xl font-bold text-neutral-100">
+      Hello there 👋
+    </h1>
     <p class="mt-3">
       I’m Paweł, a passionate programmer who wants to learn as much as I can
       about web development and build cool apps! Besides programming, I enjoy
       reading books, listening to my favorite music and meeting with my friends.
     </p>
     <p class="mt-3">
-      I've rebuild my old personal website because I have heard many good things about astro, and it's true.
-      This website is inspired by Lee Robinson, Kent C. Dodds and many others.
+      I've rebuild my old personal website because I have heard many good things
+      about astro, and it's true. This website is inspired by Lee Robinson, Kent
+      C. Dodds and many others.
     </p>
+
+    <h3 class="text-xl mt-10 md:text-2xl font-semibold text-neutral-100">
+      Spotify stats
+    </h3>
+    <Tracks />
   </main>
 </Layout>
