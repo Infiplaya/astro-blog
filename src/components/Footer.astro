@@ -1,25 +1,20 @@
 ---
-import NowPlaying from "./NowPlaying";
-
 const githubLink = "https://github.com/Infiplaya";
 const linkedLink = "https://www.linkedin.com/in/psobaniec09/";
 const emailLink = "mailto:pawelsobaniec6@gmail.com";
 ---
 
-<footer class="mt-20">
-  <NowPlaying />
-  <div class="grid grid-cols-2 text-neutral-500 mb-10">
-    <ul class="space-y-5">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/projects">Projects</a></li>
-    </ul>
-    <ul class="space-y-5">
-      <li><a href={githubLink} target="_blank">Github</a></li>
-      <li><a href={linkedLink} target="_blank">Linkedin</a></li>
-      <li><a href={emailLink}>Email me</a></li>
-    </ul>
-  </div>
+<footer class="grid grid-cols-2 text-neutral-500 mt-20 mb-10">
+  <ul class="space-y-5">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/projects">Projects</a></li>
+  </ul>
+  <ul class="space-y-5">
+    <li><a href={githubLink} target="_blank">Github</a></li>
+    <li><a href={linkedLink} target="_blank">Linkedin</a></li>
+    <li><a href={emailLink}>Email me</a></li>
+  </ul>
 </footer>
 
 <style>
