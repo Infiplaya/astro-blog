@@ -6,12 +6,12 @@ const posts = await Astro.glob("./posts/*.mdx");
 
 <Layout title={pageTitle}>
   <main class="mt-10 md:mt-20">
-    <h1 class="text-4xl md:text-5xl font-bold">Blog</h1>
+    <h1 class="text-4xl md:text-5xl font-bold font-opensans">Blog</h1>
     <p class="text-neutral-400 text-lg md:text-xl mt-5">
       For some reason most of great developers have blog. I am not one of them
       but why not?
     </p>
-    <h2 class="mt-10 text-3xl md:text-4xl font-bold">All posts</h2>
+    <h2 class="mt-10 text-3xl md:text-4xl font-bold font-opensans">All posts</h2>
     <ul class="mt-5">
       {
         posts.map((post) => (
