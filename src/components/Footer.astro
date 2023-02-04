@@ -4,7 +4,8 @@ const linkedLink = "https://www.linkedin.com/in/psobaniec09/";
 const emailLink = "mailto:pawelsobaniec6@gmail.com";
 ---
 
-<footer class="grid grid-cols-2 text-neutral-500 mt-20 mb-10">
+<footer class="flex justify-center text-neutral-500 mt-20 mb-10">
+  <div class="grid grid-cols-2 gap-10">
   <ul class="space-y-5">
     <li><a href="/">Home</a></li>
     <li><a href="/about">About</a></li>
@@ -15,6 +16,7 @@ const emailLink = "mailto:pawelsobaniec6@gmail.com";
     <li><a href={linkedLink} target="_blank">Linkedin</a></li>
     <li><a href={emailLink}>Email me</a></li>
   </ul>
+  </div>
 </footer>
 
 <style>
