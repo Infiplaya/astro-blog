@@ -9,18 +9,22 @@ const posts = await Astro.glob("./posts/*.mdx");
     <h1 class="text-4xl md:text-5xl font-bold font-opensans">Blog</h1>
     <p class="text-neutral-400 text-lg md:text-xl mt-5">
       For some reason most of great developers have blog. I am not one of them
-      but why not?
+      but why not? I will try to update the posts and write more when I have
+      more time.
     </p>
-    <h2 class="mt-10 text-3xl md:text-4xl font-bold font-opensans">All posts</h2>
-    <ul class="mt-5">
+    <ul class="mt-5 md:mt-10">
       {
         posts.map((post) => (
           <li class="mb-10">
             <a href={post.url}>
-              <h3 class="font-bold text-xl md:text-2xl">{post.frontmatter.title}</h3>
-              <p class="text-neutral-400 mt-2 md:text-lg">
-                {post.frontmatter.description}
-              </p>
+              <div class="hover:bg-neutral-800 rounded-lg py-5">
+                <h3 class="px-3 font-bold text-lg md:text-xl text-teal-500">
+                  {post.frontmatter.title}
+                </h3>
+                <p class="px-3 text-neutral-400 mt-2 md:text-lg">
+                  {post.frontmatter.description}
+                </p>
+              </div>
             </a>
           </li>
         ))

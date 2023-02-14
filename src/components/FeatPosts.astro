@@ -11,27 +11,23 @@ const getGradient = (id: number) => {
 };
 ---
 
-<section class="mt-10">
-  <h2 class="text-3xl md:text-4xl font-semibold font-opensans">Featured posts</h2>
+<section class="mt-20">
+  <h2 class="text-3xl md:text-4xl font-semibold font-opensans">
+    Featured posts
+  </h2>
   <ul class="md:grid md:grid-cols-3 md:gap-8 mt-5 space-y-10 md:space-y-0">
     {
       posts.slice(0, 3).map((post) => (
-        <li class="transition ease-in-out delay-150 bg-neutral-900 hover:-translate-y-1 hover:scale-110 h-44 md:h-64">
-          <a href={post.url}>
-            <div
-              class={`p-1 rounded-lg h-full w-full ${getGradient(
-                post.frontmatter.id
-              )}`}
-            >
-              <div class="flex flex-col w-full h-full bg-neutral-900">
-                <h3 class="text-lg font-semibold text-gray-300 p-3 md:p-5">
-                  {post.frontmatter.description}
-                </h3>
-                <p class="mt-auto md:mb-5 mb-3 self-start px-3 md:px-5 text-neutral-400">{post.frontmatter.time}</p>
-              </div>
-            </div>
-          </a>
-        </li>
+        <a href={post.url}>
+          <div class="flex flex-col w-full h-full bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 rounded-lg">
+            <h3 class="text-lg font-medium text-gray-300 p-3 md:p-5">
+              {post.frontmatter.description}
+            </h3>
+            <p class="mt-auto md:mb-5 mb-3 self-start px-3 md:px-5 text-neutral-400">
+              {post.frontmatter.time}
+            </p>
+          </div>
+        </a>
       ))
     }
   </ul>
